@@ -1,5 +1,5 @@
 package CHI::Driver::Redis;
-use Moose;
+use Moo;
 
 use Check::ISA;
 use Redis;
@@ -188,9 +188,7 @@ sub _verify_redis_connection {
     return $success;
 }
 
-__PACKAGE__->meta->make_immutable;
-
-no Moose;
+1;
 
 __END__
 
